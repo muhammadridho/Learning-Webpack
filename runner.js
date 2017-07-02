@@ -18,8 +18,8 @@ prompt.get(['message'], function (err, result) {
 
 
  function deployment(message){
-   shell.exec('git add .')
-   shell.exec('git commit -m "'+message+'"')
+   shell.exec('git add .',{silent : true}, function(){console.log('adding file')})
+   shell.exec('git commit -m "'+message+'"', {silent : true})
    shell.exec('git push origin master', {async : true}, _pushGithub)
  }
 
