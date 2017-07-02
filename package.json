@@ -1,0 +1,24 @@
+{
+  "name": "learning-webpack",
+  "version": "1.0.0",
+  "description": "Repository for learning webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhammadridho/Learning-Webpack.git"
+  },
+  "author": "ridho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhammadridho/Learning-Webpack/issues"
+  },
+  "homepage": "https://github.com/muhammadridho/Learning-Webpack#readme",
+  "dependencies": {
+    "prompt": "^1.0.0",
+    "shelljs": "^0.7.8"
+  }
+}
