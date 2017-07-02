@@ -20,6 +20,9 @@ prompt.get(['message'], function (err, result) {
  function deployment(message){
    shell.exec('git add .')
    shell.exec('git commit -m "'+message+'"')
-   shell.exec('git push origin master')
+   shell.exec('git push origin master', {async : true}, _pushGithub)
  }
-console.log('Automated Running')
+
+ function _pushGithub(code, stdout, stderr){
+   console.log('Try to deployment')
+ }
