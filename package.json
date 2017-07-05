@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/muhammadridho/Learning-Webpack#readme",
   "dependencies": {
+    "node-sass": "^4.5.3",
     "prompt": "^1.0.0",
+    "sass-loader": "^6.0.6",
     "shelljs": "^0.7.8"
   }
 }

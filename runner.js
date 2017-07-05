@@ -20,5 +20,5 @@ prompt.get(['message'], function (err, result) {
  }
 
  function _pushGithub(code, stdout, stderr){
-   console.log('Try to deployment')
+   console.log('Success Deploy sir!')
  }
