@@ -1,0 +1,38 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add webpack
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/m.ridho/Library/Android/sdk//tools:/Users/m.ridho/Library/Android/sdk//platform-tools
+
+Yarn version: 
+  0.24.6
+
+Node version: 
+  8.1.3
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "konfigurasi-dasar",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "ridho",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: read ETIMEDOUT
+      at exports._errnoException (util.js:1022:11)
+      at TLSWrap.onread (net.js:610:25)
