@@ -1,0 +1,16 @@
+{
+  "name": "konfigurasi-dasar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "webpack -d --watch",
+    "prod" : "webpack -p"
+  },
+  "author": "ridho",
+  "license": "MIT",
+  "dependencies": {
+    "html-webpack-plugin": "^2.29.0",
+    "webpack": "^3.1.0"
+  }
+}
