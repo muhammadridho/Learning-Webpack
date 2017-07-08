@@ -1,0 +1,1 @@
+webpackJsonp([1],{12:function(n,e,o){const t=(o(13),o(14));o(15),document.body.appendChild(t())},13:function(n,e){},14:function(n,e){n.exports=function(){var n=document.createElement("h1");return n.innerHTML="Halo dari webpack",n}}},[12]);
