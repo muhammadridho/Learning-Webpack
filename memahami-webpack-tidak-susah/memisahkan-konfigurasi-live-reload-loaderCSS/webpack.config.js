@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
+      ExtractTextPlugin = require('extract-text-webpack-plugin'),
       webpack = require('webpack'),
       path = require('path'),
       merge = require('webpack-merge'),
@@ -13,7 +14,12 @@ var commonConf = {
       plugins : [
         new HtmlWebpackPlugin({
           title : 'Belajar Konfigurasi webpack'
-        })
+        }),
+        new ExtractTextPlugin({
+          filename : 'app.css',
+          disable : false,
+          allChunks : true
+        }),
       ]
     },
     config = {}
@@ -34,5 +40,4 @@ var commonConf = {
           })
         );
     }
-console.log('ini dia', JSON.stringify(config))
 module.exports = config

@@ -1,14 +1,15 @@
 const webpack = require('webpack'),
-      ExtractTextPlugin = require('extract-text-webpack-plugin'),
-      path = require('path');
+      HtmlWebpackPlugin = require('html-webpack-plugin'),
+      path = require('path'),
+      ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.development = function(options) {
   return {
     module : {
       rules : [
         {
-          test : /\.css$/,
-          use : ['style-loader','css-loader']
+          test : /\.scss$/,
+          use : ['style-loader','css-loader','sass-loader']
         }
       ]
     },
@@ -18,12 +19,13 @@ exports.development = function(options) {
       hot: true,
       stats: 'errors-only',
       host: options.host,
-      port: options.port
+      port: options.port || 8080
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin({
         multistep: true
-      })
+      }),
+      new webpack.NamedModulesPlugin()
     ]
   }
 }
@@ -33,14 +35,23 @@ exports.build = function(){
     module : {
       rules : [
         {
-          test : /\.css$/,
+          test : /\.scss$/,
           use : ExtractTextPlugin.extract({
                   fallback: 'style-loader',
-                  loader: ['css-loader'],
+                  loader: ['css-loader','sass-loader'],
                   publicPath: '/dist'
                 })
         }
       ]
-    }
+    },
+    plugins : [
+      new HtmlWebpackPlugin({
+        title : 'Belajar Webpack !',
+        minify : {
+          collapseWhitespace : true
+        },
+        hash : true
+      })
+    ]
   }
 }
